@@ -1,6 +1,6 @@
 {
     "name":"Kickass",
-    "baseUrl": "http://kickass.to",
+    "baseUrl": "https://kickass.to",
     "pattern":"/usearch/[text]%20category%3A[category]/[page]/",
     "pageRules":
     {
