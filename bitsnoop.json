@@ -1,0 +1,72 @@
+{
+    "name":"Bitsnoop",
+    "baseUrl": "http://bitsnoop.com",
+    "pattern":"/search/[category]/[text]/c/d/[page]/",
+    "headers":
+    {
+	"User-Agent":"'Mozilla/5.0'"
+    },
+    "pageRules":
+    {
+        "start":1,
+        "step":1,
+	"maxItems":30
+    },
+    "categories":
+    {
+        "All":"all",
+	"Video":"video",
+	"Audio":"audio",
+	"Games":"games",
+	"Software":"software",
+	"Other":"other"
+    },
+    "ops":
+    {
+	"titles":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li[div[2][not(span[@class='health h0'])]]/a",
+	    "container":"text"
+	},
+	"categories":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li/div[2][not(span[@class='health h0'])]/text()[3]",
+	    "container":"raw",
+	    "replace":["— ",""]
+	},
+	"seeders":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li/div[2][not(span[@class='health h0'])]/span[2]",
+	    "container":"text"
+	},
+	"leechers":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li/div[2][not(span[@class='health h0'])]/span[3]",
+	    "container":"text"
+	},
+	"sizes":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li[div[2][not(span[@class='health h0'])]]/div[@id='sz']/table/tr/td[1]/text()",
+	    "container":"raw"
+	},
+	"magnets":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li[div[2][not(span[@class='health h0'])]]/a",
+	    "container":"href",
+	    "crawler":
+	    {
+		"xpath":"//*[@id=\"dload\"]/a[2]"
+	    }
+	},
+	"urls":
+	{
+	    "xpath":"//*[@id=\"torrents\"]/li[div[2][not(span[@class='health h0'])]]/a",
+	    "container":"href",
+	    "crawler":
+	    {
+		"xpath":"//*[@id=\"dload\"]/a[5]"
+	    }
+	}
+
+    }
+}

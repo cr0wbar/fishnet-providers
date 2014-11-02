@@ -1,0 +1,60 @@
+{
+    "name":"Fenopy",
+    "baseUrl": "http://fenopy.se",
+    "pattern":"/search/[text].html?cat=[category]&start=[page]",
+    "replaceInQuery":[" ","-"],
+    "pageRules":
+    {
+	"start":0,
+	"step":50,
+	"maxItems":50
+    },
+    "categories":
+    {
+	"All":"0",
+	"Movies":"3",
+	"Tv":"78",
+	"Games":"4",
+	"Music":"1",
+	"Applications":"6",
+	"Anime":"5",
+	"Books":"7",
+	"Videos":"2",
+	"Others":"72"
+    },
+    "ops":
+    {
+	"titles":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[1]/a",
+	    "container":"text"
+	},
+	"sizes":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[4]",
+	    "container":"text"
+	},
+	"categories":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[1]/text()",
+	    "container":"raw",
+	    "replace":["»",""]
+	},
+	"magnets":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[3]/a[3]",
+	    "container":"href"
+	},
+	"seeders":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[6]",
+	    "container":"text"
+	},
+	"leechers":
+	{
+	    "xpath":"//*[@id=\"search_table\"]/tbody/tr/td[7]",
+	    "container":"text"
+	}
+
+    }
+}

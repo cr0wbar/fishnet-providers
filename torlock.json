@@ -1,0 +1,56 @@
+{
+    "name":"Torlock",
+    "baseUrl": "http://www.torlock.com",
+    "pattern":"/[category]/torrents/[text]/[page].html",
+    "replaceInQuery":[" ","-"],
+    "headers":
+    {
+	"User-Agent":"'Mozilla/5.0'"
+    },
+    "pageRules":
+    {
+	"start":1,
+	"step":1,
+	"maxItems":75
+    },
+    "categories":
+    {
+	"All":"all",
+	"Movies":"movie",
+	"Tv":"television",
+	"Games":"game",
+	"Music":"music",
+	"Software":"software",
+	"Anime":"anime",
+	"Ebooks":"ebooks"
+    },
+    "ops":
+    {
+	"titles":
+	{
+	    "xpath":"//*[@id=\"content\"]/table[2]/tr/td[@class='tv']/div[1]/a",
+	    "container":"text"
+	},
+	"sizes":
+	{
+	    "xpath":"//*[@id=\"content\"]/table[2]/tr/td[@class='ts']",
+	    "container":"text"
+	},
+	"seeders":
+	{
+	    "xpath":"//*[@id=\"content\"]/table[2]/tr/td[@class='tul']",
+	    "container":"text"
+	},
+	"leechers":
+	{
+	    "xpath":"//*[@id=\"content\"]/table[2]/tr/td[@class='tdl']",
+	    "container":"text"
+	},
+	"urls":
+	{
+	    "xpath":"//*[@id=\"content\"]/table[2]/tr/td[@class='tv']/div[1]/a",
+	    "container":"href",
+	    "crawler":{"xpath":"//*[@id=\"content\"]/center/table/tr/td[2]/a"}
+	}
+    }
+}

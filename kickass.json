@@ -1,0 +1,58 @@
+{
+    "name":"Kickass",
+    "baseUrl": "http://kickass.to",
+    "pattern":"/usearch/[text]%20category%3A[category]/[page]/",
+    "pageRules":
+    {
+	"start":1,
+	"step":1,
+	"maxItems":25
+    },
+    "categories":
+    {
+	"All":"all",
+	"Applications":"applications",
+	"Movies":"movies",
+	"Music":"music",
+	"Tv":"tv",
+	"Other":"other"
+    },
+    "ops":
+    {
+	"titles":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[1]/div[2]/div/a",
+	    "container":"text"
+	},
+	"sizes":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[2]",
+	    "container":"text"
+	},
+	"categories":
+	{
+	    "xpath":"//*[starts-with(@id,\"cat_\")]",
+	    "container":"text"   
+	},
+	"seeders":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[5]",
+	    "container":"text"
+	},
+	"leechers":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[6]",
+	    "container":"text"
+	},
+	"urls":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[1]/div[1]/a[starts-with(@title,\"Download torrent\")]",
+	    "container":"href"  
+	},
+	"magnets":
+	{
+	    "xpath":"//*[starts-with(@id,\"torrent_\")]/td[1]/div[1]/a[starts-with(@title,\"Torrent magnet\")]",
+	    "container":"href"
+	}
+    }
+}
