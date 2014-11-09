@@ -1,11 +1,11 @@
 {
     "list":
     [
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/bitsnoop.json",
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/isohunt.json",
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/fenopy.json",
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/kickass.json",
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/monova.json",
-	"https://raw.githubusercontent.com/cr0wbar/fishnet/master/torlock.json"
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/bitsnoop.json",
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/isohunt.json",
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/fenopy.json",
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/kickass.json",
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/monova.json",
+	"https://raw.githubusercontent.com/cr0wbar/fishnet-providers/master/torlock.json"
     ]
 }
