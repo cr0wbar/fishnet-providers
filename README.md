@@ -1,4 +1,4 @@
-fishnet
+F1S#N3T - providers
 =======
 
-F1S#N3T is a simple tool to find torrents
+This repo contains F1S#N3T's default providers
