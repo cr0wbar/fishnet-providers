@@ -8,6 +8,10 @@
 	"step":40,
 	"maxItems":40
     },
+    "headers":
+    {
+	"User-Agent":"'Mozilla/5.0'"
+    },
     "categories":
     {
 	"All":"0",
@@ -51,14 +55,7 @@
 	{
 	    "xpath":"//*[@id=\"serps\"]/table/tbody/tr[not(td[1]/text()='Sponsored')]/td[2]/div/a",
 	    "container":"href",
-	    "crawler":{"xpath":"/html/body/div[3]/div[2]/div[1]/div[3]/div/a[2]"}
-	},
-	"urls":
-	{
-	    "xpath":"//*[@id=\"serps\"]/table/tbody/tr[not(td[1]/text()='Sponsored')]/td[2]/div/a",
-	    "container":"href",
-	    "crawler":{"xpath":"/html/body/div[3]/div[2]/div[1]/div[3]/div/a[1]"}
+	    "crawler":{"xpath":"//*[@class=\"torr-down-buttons\"]/a[2]"}
 	}
-
     }
 }
